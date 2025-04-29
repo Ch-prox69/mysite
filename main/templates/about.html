@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Me{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <h1 class="display-4">About Me</h1>
+    <p class="lead">Welcome to my Website! Below you will find some information about me.</p>
+    <p>
+        My name's Christian Hartzell and I'm soon to be out in the real world. This website is
+        my final for FWCS Anthis Career Academy Software Development. A little bit about me: I'm currently
+        an intern at a small MSP called Reboot here in Fort Wayne. I'll be attending Ivy Tech in the fall
+        for my associate degree in Information Technology Support and working full-time at Reboot, so
+        wish me luck! I will also plan to pursue my bachelor's degree in IT after I complete my associates.
+        This means 4 years of full-time work and school! Wish me luck!
+    </p>
+    <p>
+        My favorite pastime is hanging out with friends and playing video games. Below are some of my favorite video games:
+    </p>
+
+    <div class="row justify-content-center mt-4">
+        <div class="col-md-3 col-6 mb-3">
+            <img src="{% static 'images/ets2.jpg' %}" alt="ETS2" class="img-fluid img-thumbnail">
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+            <img src="{% static 'images/oblivion.jpg' %}" alt="Oblivion" class="img-fluid img-thumbnail">
+        </div>
+        <div class="col-md-3 col-6 mb-3">
+            <img src="{% static 'images/kcd.jpg' %}" alt="Kingdom Come: Deliverance" class="img-fluid img-thumbnail">
+        </div>
+    </div>
+</div>
+{% endblock %}
