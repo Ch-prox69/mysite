@@ -1,22 +1,27 @@
 {% extends 'base.html' %}
 
+{% block title %}{{ action }} Blog Post{% endblock %}
+
 {% block content %}
 <div class="container mt-4">
     <h2>{{ action }} Blog Post</h2>
     <form method="post">
         {% csrf_token %}
 
+        <!-- Title Field -->
         <div class="mb-3">
             <label for="id_title" class="form-label">Title</label>
             <input type="text" name="title" id="id_title" value="{{ form.title.value }}" class="form-control" required>
         </div>
 
+        <!-- Content Field -->
         <div class="mb-3">
             <label for="id_content" class="form-label">Content</label>
             <textarea name="content" id="id_content" class="form-control" required>{{ form.content.value }}</textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary">{{ action }} Post</button>
+        <!-- Submit Button -->
+        <button type="submit" class="btn btn-primary">{{ action }} / Submit</button>
     </form>
 </div>
 {% endblock %}
