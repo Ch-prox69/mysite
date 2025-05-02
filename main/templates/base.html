@@ -8,11 +8,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Custom Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+
+  <!-- Load static files -->
+  {% load static %}
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <style>
     body {
-      font-family: 'Roboto', sans-serif;
+      font-family: 'MedievalSharp', sans-serif;
+      background: url("{% static 'images/backround.jpg' %}") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 20px;
+      border-radius: 8px;
     }
   </style>
 
@@ -22,7 +34,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container">
-      <a class="navbar-brand" href="/">Hartzell Home</a>
+      <a class="navbar-brand" href="/">Website Navigation Taskbar</a>
       <div class="collapse navbar-collapse">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
