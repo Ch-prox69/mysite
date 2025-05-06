@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+
+      <h1 class="mb-4 text-center">Ask Me a Question</h1>
+
+      <div class="card shadow-sm mb-5">
+        <div class="card-body">
+          <form method="post" novalidate>
+            {% csrf_token %}
+            <div class="mb-3">
+              {{ form.name.label_tag }} {{ form.name }}
+            </div>
+            <div class="mb-3">
+              {{ form.question_text.label_tag }} {{ form.question_text }}
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <h2 class="mb-3">Answered Questions</h2>
+      {% for q in questions %}
+        <div class="card mb-4">
+          <div class="card-header">
+            <strong>{{ q.name }}</strong> asked:
+          </div>
+          <div class="card-body">
+            <p class="mb-2">{{ q.question_text }}</p>
+            <hr>
+            <h6 class="text-muted">Answer:</h6>
+            <p>{{ q.answer_text }}</p>
+          </div>
+        </div>
+      {% empty %}
+        <p>No questions have been answered yet.</p>
+      {% endfor %}
+
+    </div>
+  </div>
+</div>
+{% endblock %}
