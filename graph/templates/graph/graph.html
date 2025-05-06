@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}Graph{% endblock %}
+
+{% block content %}
+  <div class="container py-5">
+    <h1 class="text-center mb-4">How Often I Play Drums</h1>
+
+    <div class="row justify-content-center">
+      <div class="col-md-10">
+        <!-- Plotly Graph -->
+        <div id="graph-container">
+          {{ graph_html|safe }}
+          <div class="mt-5">
+  <h3>What Kind of Music do I Play on the Drums?</h3>
+  <p>I play to classic rock, heavy metal, and a bit of blues if you count Led Zeppelin being blues.
+  Some of my favorite bands to play to are Led Zeppelin, The Who, Kansas, Deep Purple, Toto, Judas Priest, and Queen.
+  My favorite drummer is John Bonham from Led Zeppelin. He's widely considered to be one of the greatest drummers
+  of all time! My favorite songs to play to are Led Zeppelin - Custard Pie, The Who - Won't Get Fooled Again,
+  Nazareth - Hair of the Dog, and Led Zeppelin - D'yer Mak'er.</p>
+
+  <h3>Are the Drums a Hard Instrument to Play?</h3>
+  <p>It depends. To most people, the drums just look like some random guy flailing his arms around hitting
+  random drums that make noise. This is just plain wrong. The drums are a backbone of a band because it gives
+  the band that beat that it needs to make the music pop. The Drums require technique from holding the sticks
+  to learning what sounds right with what. Now, with all this, the drums aren't as hard as an instrument like a pipe organ or a harp, but still a hard instrument regardless. Now to actually play, you don't need to know
+  sheet music, at least in my opinion you don't. Most rock drummers rarely ever touched sheet music because
+  the drums are about feeling what's right by sound, so most rock drummers usually don't make sheet music
+  for their songs. The hardest part about playing the drums isn't getting the right notes or making sure everything
+  is perfect, it's endurance. Most drummers should be able to play for at least an hour. Drumming is also a workout too.
+  You play at high speeds and generate a lot of movement, so this causes most drummers to sweat like crazy.</p>
+
+  <h3>What are some Drawbacks to plating the Drums?</h3>
+  <p>Some drawbacks of playing the drums are hearing loss, blisters, and carpel tunnel syndrome. For hearing loss, this is
+  caused by a culmination of thousands of hours of playing drums, acoustic set, without hearing protection. Most
+  professional drummers, Phil Collins and Dave Grohl to name a few, have to wear hearing aids due to loss of hearing.
+  The best way to protect your hearing is using earbuds, but even then you will still likely get hearing loss, so
+  there's really no way of working around it unless you give up playing all together, which no one will do that. Another
+  problem is blisters. This is an issue if you play very fast and long, which is just asking for blisters. The best
+  way to prevent blisters are either using hand lotion, or wearing gloves. I've tried both, and lotion is the best, although
+  it makes it a bit tricky to hold the sticks in place. The last issue you might run into is carpel tunnel syndrome.
+  While there aren't a lot of pro drummers who have reported having CTS, it's still a possibility. To mitigate this, make
+  sure to strech out your hands to mitigate the risk.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
